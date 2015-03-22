@@ -402,3 +402,37 @@ f(); //=> a
 f(); //=> b
 f(); //=> c
 ```
+
+オブジェクト
+
+基本的にドット記法でアクセスする。
+動的にアクセスする場合や、キーにクォートが必要な場合のみ`[]`でアクセスする。
+
+```js
+var object = {
+  a: 1,
+  b: function() {
+    return 2;
+  }
+}
+object.a    //=> 1
+object['a'] //=> 1
+object.b()  //=> 2
+typeof(object) //=> object
+```
+
+thisによるアクセス
+
+```js
+var human = {
+  name: 'taro',
+  say: function() {
+    return this.name;
+  }
+}
+human.say(); //=> taro
+```
+
+---
+
+次：4.1.7
