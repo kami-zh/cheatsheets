@@ -21,6 +21,80 @@
 - **補語**（C:Complement）：主語や目的語が「どういうものなのか」あるいは「どういう状態にあるのか」を説明する、文が成り立つために必要な語。補語になるのは名詞、代名詞、形容詞。
 - **修飾語**：主語、述語、目的語、補語を修飾して、意味を付け加える語。名詞や代名詞を修飾して形容詞の働きをするものと、動詞や形容詞を修飾して副詞の働きをするものがある。
 
+## 文の形
+
+### 平叙文
+
+単に情報を伝えるだけの文。
+
+```
+My sister is a college student.
+We go to school even on Saturdays.
+My brother can swim very fast.
+```
+
+### 否定文
+
+- `be`動詞の場合：`be`動詞+`not`
+- `be`動詞以外の動詞の場合：[`do`|`does`|`did`] `not`+動詞の原形
+- 助動詞の場合：助動詞+`not`
+
+```
+My sister isn't a college student.
+We don't go to school even on Saturdays.
+My brother can't swim very fast.
+```
+
+### 疑問文
+
+#### 聞き方
+
+- `be`動詞の場合：`be`動詞+主語
+- `be`動詞以外の動詞の場合：[`Do`|`Did`|`Does`]+主語+動詞の原形
+- 助動詞の場合：助動詞+主語+動詞の原形
+
+#### 答え方
+
+- [`Yes`|`No`]のあとに主語+[動詞|助動詞]
+
+```
+"Is your sister a college student?" "Yes, she is."
+"Do you go to school even on Saturdays?" "Yes, we do."
+"Can your brother swim very fast?" "Yes, he can."
+```
+
+### 疑問詞を使った疑問文
+
+- 疑問詞が主語：疑問詞+動詞
+- それ以外：疑問詞+[動詞|助動詞]+主語
+
+```
+"Who painted this picture?" "My father did."
+"What are you doing?" "I'm waiting for Mike."
+"When did you hear about the accident?" "This morning."
+"When will he come home?" "I don't know."
+```
+
+### 命令文
+
+- 肯定：動詞の原形で始める
+- 否定：`Don't`+動詞の原形で始める
+
+```
+Be careful!
+Don't be so noisy!
+```
+
+### 感嘆文
+
+- 形容詞や副詞の意味を強調する場合：`How`+[形容詞|副詞]+主語+動詞
+- 形容詞+名詞の意味を強調する場合：`What` [`a`|`an`]+形容詞+名詞+主語+動詞
+
+```
+How kind you are!
+What a beautiful stone this is!
+```
+
 ---
 
 SV
@@ -30,13 +104,3 @@ SVOO
 SVOC
 
 SVO + to/for
-
----
-
-平叙文/肯定文
-否定文
-疑問文
-
----
-
-次回：P22のまとめから
