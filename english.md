@@ -95,12 +95,46 @@ How kind you are!
 What a beautiful stone this is!
 ```
 
----
+## 動詞の使い方
 
-SV
-SVC
-SVO
-SVOO
-SVOC
+### 自動詞と他動詞
+
+- 自動詞：主語と動詞の組み合わせで意味を表す
+- 他動詞：動詞の後に目的語をとる
+
+```
+He didn't move.
+He didn't move the desk.
+```
+
+### 述語動詞
+
+次の3点を考慮して形を変える必要がある：
+
+1. いつのことを表しているか
+2. 主語の人称はなにか
+3. 主語は単数か複数か
+
+## 文型
+
+- 第1文型：**SV**
+- 第2文型：**SVC**
+  - S=Cの関係が成り立つ
+- 第3文型：**SVO**
+- 第4文型：**SVOO**
+  - なにか（物や情報など）が誰かのところに移動することを表す
+    - 最初のOが「誰か」、その後が「なにか」という順番になる
+- 第5文型：**SVOC**
+  - O=Cの関係が成り立つ
+
+```
+SV:   He smiled.
+SVC:  The movie was funny.
+SVO:  We cleaned the classroom.
+SVOO: My father bought me a watch.
+SVOC: They made me angry.
+```
+
+---
 
 SVO + to/for
