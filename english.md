@@ -135,6 +135,60 @@ SVOO: My father bought me a watch.
 SVOC: They made me angry.
 ```
 
----
+- 存在を伝える：`There`+`be`動詞+名詞
 
-SVO + to/for
+```
+There is a cat under the table.
+There are three children in the park.
+```
+
+## 文型と動詞
+
+### SVCの文型で用いられる動詞
+
+- 〜である、〜のままである
+  - `be`/`keep`/`lie`/`remain`/`stay`など
+- 〜になる
+  - `become`/`get`/`grow`/`turn`など
+- 〜の感じがする
+  - `feel`/`smell`/`taste`/`look`/`sound`など
+- 〜に思われる
+  - `seem`/`appear`など
+
+```
+She kept calm during the earthquake.
+I get nervous before exams.
+Silk feels smooth.
+She seemed shy at first.
+```
+
+### SVOOの文型で用いられる動詞
+
+- give型（「相手のもとになにかを届かせる」タイプ）
+  - `give`/`lend`/`show`/`hand`/`offer`/`pass`/`pay`/`sell`/`send`/`teach`/`tell`など
+  - 相手を強調する場合：SVO+`to`+相手
+- buy型（「相手のためになにかをする」タイプ）
+  - `buy`/`find`/`cook`/`make`/`choose`/`get`/`leave`/`play`/`sing`など
+  - 相手を強調する場合：SVO+`for`+相手
+
+```
+I lent Jim ten dollars.
+I lent ten dollars to Jim.
+He cooked me a nice meal.
+He cooked a nice meal for me.
+```
+
+### SVOCの文型で用いられる動詞
+
+- make型：OをCにする
+  - `make`/`get`/`keep`/`leave`/`paint`など
+- call型：OをCと呼ぶ
+  - `call`/`elect`/`name`など
+- think型：OをCと考える
+  - `think`/`believe`/`find`/`considerなど`
+
+```
+She keeps her desk clean.
+We call him Teddy.
+You'll find his brother cool.
+```
