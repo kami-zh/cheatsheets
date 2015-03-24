@@ -192,3 +192,52 @@ She keeps her desk clean.
 We call him Teddy.
 You'll find his brother cool.
 ```
+
+## 時制
+
+- 現在形
+  - 動詞の原形を用いる
+  - 現在の状態、現在の反復動作（習慣）、一般的な事実を表す
+  ```
+  Jack plays tennis every Sunday.
+  ```
+- 現在進行形
+  - `be`動詞+動詞の`ing`形
+  - 現在進行中の動作を表す
+  ```
+  Jack is playing tennis with Bob now.
+  ```
+- 過去形
+  - 動詞を過去形にする
+  - 過去のある時期に存在していた状態、過去に1回行なわれた動作などを表す
+  ```
+  The store was full of young people last week.
+  We went to a concert last week.
+  ```
+- 過去進行形
+  - `be`動詞の過去形+動詞の`ing`形
+  - 過去のあるときにしている最中だった動作を表す
+  ```
+  I was watching TV around noon.
+  ```
+- 未来形
+  - `will`+動詞の原形または`be going to`+動詞の原形
+  - 自然の成り行き（`will`）、すでに行なうつもりだったこと（`be going to`）を表す
+  ```
+  My brother will be twenty next year.
+  I'm going to buy a digital camera.
+  ```
+- 未来進行形
+  - `will be`+動詞の`ing`形
+  - 未来のあるときに行なわれている最中であると思われることを表す
+  ```
+  We will be playing tennis at this time tomorrow.
+  ```
+
+### 備考
+
+- `when`や`if`などの条件を表す接続詞を用いる場合は現在形にする
+  ```
+  The birds will fly south when winter comes.
+  If it is fine tomorrow, let's go swimming.
+  ```
