@@ -85,6 +85,13 @@ delete(a[1]);
 console.log(a); //=> [ 1, , 3, , 5 ]
 ```
 
+以下は同じ意味。
+
+```js
+var a = [];
+var a = new Array();
+```
+
 三項演算子
 
 ```js
@@ -421,6 +428,13 @@ object.b()  //=> 2
 typeof(object) //=> object
 ```
 
+以下は同じ意味。
+
+```js
+var o = {};
+var o = new Object();
+```
+
 thisによるアクセス
 
 ```js
@@ -433,6 +447,74 @@ var human = {
 human.say(); //=> taro
 ```
 
----
+コンストラクタ関数
 
-次：4.1.7
+```js
+function Hero(name) {
+  this.name = name;
+  this.attack = function() {
+    return 'attacked';
+  };
+};
+var hero = new Hero('taro');
+hero.name;     //=> taro
+hero.attack(); //=> attacked
+```
+
+instanceof演算子
+
+```js
+hero instanceof Hero //=> true
+```
+
+別のオブジェクトを返す関数
+
+関数の返り値として別のオブジェクトを定義した場合、関数自身のオブジェクトは返らない。
+
+```js
+function Hero(name) {
+  this.name = name;
+  return {
+    attack: function() {
+      return 'attacked';
+    }
+  }
+};
+var hero = new Hero('taro');
+hero.name;     //=> undefined
+hero.attack(); //=> attacked
+```
+
+組み込みオブジェクト
+
+- データラッパーオブジェクト
+  - Object
+  - Array
+  - Function
+  - Boolean
+  - Number
+  - String
+- ユーティリティオブジェクト
+  - Math
+  - Date
+  - RegExp
+- エラーオブジェクト
+  - Error
+
+[ToDo] 組み込みオブジェクトの使い方をまとめる（メンバーを含む）
+
+Boolean
+
+`new`を使わず関数のように使うと、`!!`と同じ結果が得られる。
+
+```js
+Boolean('foo');      //=> true
+Boolean('undefined') //=> false
+```
+
+Number
+
+`new`を使わず関数のように使うと、`parseInt()`や`parseFloat()`と同じ結果が得られる。
+
+```js
+Number('12.12'); //=> 12.12
