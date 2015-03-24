@@ -237,7 +237,7 @@ You'll find his brother cool.
 ### 備考
 
 - `when`や`if`などの条件を表す接続詞を用いる場合は現在形にする
-  ```
-  The birds will fly south when winter comes.
-  If it is fine tomorrow, let's go swimming.
-  ```
+```
+The birds will fly south when winter comes.
+If it is fine tomorrow, let's go swimming.
+```
