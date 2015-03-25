@@ -518,3 +518,93 @@ Number
 
 ```js
 Number('12.12'); //=> 12.12
+```
+
+プロトタイプ
+
+関数を定義すると、同時に`prototype`プロパティが生成される。
+これはコンストラクタとして利用した場合のみ使われ、元の関数`Foo()`自身にはなにも影響を与えない。
+
+```js
+function Foo() {
+  this.say = function() {
+    return this.name;
+  }
+};
+
+Foo.prototype = {
+  name: 'foo'
+}
+
+foo = new Foo();
+foo.say(); //=> foo
+```
+
+組み込みオブジェクトの拡張
+
+```js
+String.prototype.reverse = function() {
+  return Array.prototype.reverse.apply(this.split('')).join('');
+}
+
+'taro'.reverse(); //=> orat
+```
+
+継承
+
+```js
+function Shape() {};
+
+Shape.prototype = {
+  name: 'Shape',
+  toString: function() {
+    return this.name;
+  }
+};
+
+function Triangle(side, height) {
+  this.side = side;
+  this.height = height;
+};
+
+// 継承
+Triangle.prototype = Shape.prototype;
+Triangle.prototype.constructor = Triangle;
+
+// 拡張
+Triangle.prototype.name = 'Triangle';
+Triangle.prototype.getArea = function() {
+  return this.side * this.height / 2;
+};
+
+var triangle = new Triangle(5, 10);
+
+triangle.toString(); //=> Triangle
+triangle.getArea;    //=> 25
+```
+
+上記の方法では、`Triangle.prototype`への変更が`Shape.prototype`にも反映されてしまう。
+つまり、`Shape`を継承する他のオブジェクトがある場合、意図しない動作をしてしまうおそれがある。
+これを防ぐには、以下のような`extend()`関数を定義する。
+
+```js
+function extend(Child, Parent) {
+  var F = function() {};
+  F.prototype = Parent.prototype;
+  Child.prototype = new F();
+  Child.prototype.constructor = Child;
+  Child.uber = Parent.prototype;
+};
+
+// 継承
+// Triangle.prototype = Shape.prototype;
+// Triangle.prototype.constructor = Triangle;
+extend(Triangle, Shape);
+```
+
+継承は以下の方法でもできるが、これは継承のためだけに新しいオブジェクトを生成してしまう。
+また、プロトタイプだけでなく`Shape()`自体も継承してしまう。
+
+```js
+Triangle.prototype = new Shape();
+```
