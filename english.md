@@ -236,8 +236,50 @@ You'll find his brother cool.
 
 ### 備考
 
-- `when`や`if`などの条件を表す接続詞を用いる場合は現在形にする
+`when`や`if`などの条件を表す接続詞を用いる場合において、その時点の状況を表す場合、接続詞の後の動詞は現在形にする。
+
 ```
 The birds will fly south when winter comes.
 If it is fine tomorrow, let's go swimming.
+```
+
+## 完了形
+
+- 現在完了形
+  - [`have`|`has`]+過去分詞
+  - 過去のいきさつとつなげて、今の状況を表す
+  ```
+  I have known Paul since we were children.
+  ```
+- 現在完了進行形
+  - [`have`|`has`]+`been`+動詞の`ing`形
+  - 過去のいきさつとつなげて、現在も進行中の状況を表す
+  ```
+  I have been doing this puzzle for 30 minutes.
+  ```
+- 過去完了形
+  - `had`+過去分詞
+  - 過去のある時点において、それ以前のいきさつとつなげて、そのときの状況を表す
+  ```
+  The man had run away when the police arrived.
+  ```
+- 過去完了進行形
+  - `had been`+動詞の`ing`形
+  - 過去のある時点において、それ以前のいきさつとつなげて、そのとき進行中だった状況を表す
+  ```
+  I had been driving for two hours when I found the gas station.
+  ```
+- 未来完了形
+  - `will have`+過去分詞
+  - 未来のある時点において、それ以前のいきさつとつなげて、そのときの状況を表す
+  ```
+  These leaves will have turned red by next month.
+  ```
+
+### 備考
+
+`when`や`if`などの条件を表す接続詞を用いる場合において、それがそれ以前のいきさつとつながっている場合、接続詞の後の動詞は現在完了形にする。
+
+```
+I'm going to Rome when I have finished my Italian lessons.
 ```
