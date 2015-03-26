@@ -283,3 +283,165 @@ If it is fine tomorrow, let's go swimming.
 ```
 I'm going to Rome when I have finished my Italian lessons.
 ```
+
+## 助動詞
+
+### 助動詞+動詞の原形
+
+- 能力・許可
+  - `can`/`be able to`
+    - 〜することができる
+    ```
+    David can speak Japanese, but he can't write it.
+    You will be able to swim soon.
+    ```
+  - `Can you ...?`
+    - 〜してくれませんか
+    ```
+    Can you open the window?
+    ```
+  - `may`
+    - 〜してもよろしいですか
+    ```
+    May I use your bathroom?
+    ```
+- 義務・必要
+  - `must`/`have to`
+    - 〜しなければならない
+    ```
+    You must attend the meeting.
+    I had to write a report about my summer vacation.
+    ```
+  - `must not`
+    - 〜してはいけない
+    ```
+    You must not drink beer in the office.
+    ```
+  - `don't have to`
+    - 〜しなくてもよい
+    ```
+    You don't have to take off your shoes here.
+    ```
+  - `should`
+    - 〜すべきだ
+    ```
+    You should exercise every day.
+    ```
+- 可能性
+  - `can`
+    - 〜はありうる
+    ```
+    Anybody can make mistakes.
+    ```
+  - `may`
+    - 〜かもしれない
+    ```
+    We may have some rain tomorrow.
+    ```
+  - `will`
+    - たぶん〜だろう
+    ```
+    The phone is ringing. That will be my father.
+    ```
+  - `must`
+    - 〜に違いない
+    ```
+    She must be Bobby's sister.
+    ```
+  - `can't`
+    - 〜のはずがない
+    ```
+    Karen can't be home now.
+    ```
+  - `should`
+    - 〜のはずだ
+    ```
+    My parents should be in Boston by now.
+    ```
+- その他
+  - `will`
+    - 〜するつもりだ
+    ```
+    I will do my best in my new job.
+    ```
+  - `Will you ...?`
+    - 〜してくれませんか
+    ```
+    Will you close the window?
+    ```
+  - `Shall I ...?`
+    - 〜しましょうか
+    ```
+    Shall I make some tea?
+    ```
+  - `Shall we ...?`
+    - 〜しましょうよ
+    ```
+    Shall we throw away these old magazines?
+    ```
+  - `need`
+    - 〜する必要がある（おもに否定文・疑問文で用いられる）
+    ```
+    You needn't worry about me.
+    ```
+  - `used to`
+    - 以前はよく〜したものだった
+    ```
+    I used to go to gym after work, but now I don't.
+    ```
+
+### 助動詞+have+過去分詞
+
+- `may have`+過去分詞
+  - 〜したかもしれない
+  ```
+  You may have heard this joke before.
+  ```
+- `could have`+過去分詞
+  - 〜したかもしれない
+  ```
+  He could have left his umbrella in the shop.
+  ```
+- `must have`+過去分詞
+  - 〜したに違いない
+  ```
+  He must have told me a lie.
+  ```
+- `should have`+過去分詞
+  - 〜したはずだ
+  ```
+  The game should have started at noon.
+  ```
+  - 〜すべきだったのに
+  ```
+  You should have got up at seven.
+  ```
+- `can't have`+過去分詞
+  - 〜したはずがない
+  ```
+  He can't have accepted your plan.
+  ```
+- `need not have`+過去分詞
+  - 〜する必要はなかったのに
+  ```
+  You need not have bought so much meat.
+  ```
+
+### 助動詞を含む慣用表現
+
+- `would like to`
+  - 〜したいと思うのですが
+  ```
+  I'd like to join your team.
+  ```
+- `may well`
+  - たぶん〜だろう/〜するのも当然だ
+  ```
+  She may well be tired after her trip.
+  You may well be angry with your brother.
+  ```
+- `might as well`
+  - 〜した方がいいのでは
+  ```
+  You'll never solve that problem. You might as well give up.
+  ```
