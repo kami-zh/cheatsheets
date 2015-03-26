@@ -286,6 +286,12 @@ I'm going to Rome when I have finished my Italian lessons.
 
 ## 助動詞
 
+### 助動詞の基本イメージ
+
+| can | may | must | should |
+| --- | --- | ---- | ------ |
+| 可能性 | 容認 | 必然性 | 正当性 |
+
 ### 助動詞+動詞の原形
 
 - 能力・許可
