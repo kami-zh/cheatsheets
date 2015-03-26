@@ -705,3 +705,87 @@ Arrayオブジェクトのメンバー
 | reverse() | 配列を逆順に並べ替える |
 | slice() | 配列の一部の要素を抜き出して返す |
 | sort() | 配列をソートする |
+
+Functionオブジェクトのメンバー
+
+| メンバー | 説明 |
+| --- | --- |
+| apply() | 関数の`this`を書き換えた上で呼び出す |
+| call() | 引数を配列ではなく1つずつ受け取る以外は`apply()`と同じ |
+
+```js
+function foo() {
+  return this.toString();
+};
+
+var myObject = {};
+
+foo.apply();         //=> [object Window]
+foo.apply(myObject); //=> [object Object]
+```
+
+Numberコンストラクタのメンバー
+
+| メンバー | 説明 |
+| --- | --- |
+| Number.NaN | 数値ではないことを表すオブジェクト |
+
+Stringオブジェクトのメンバー
+
+| メンバー | 説明 |
+| --- | --- |
+| length | 文字列の文字数を返す |
+| charAt() | 指定された位置の文字を返す |
+| concat() | 入力された文字列をつなげた新しい文字列を返す |
+| indexOf() | 文字列の一部とマッチした場合、その位置を返す |
+| match() | マッチした要素の配列を返す |
+| replace() | マッチした文字列を他の文字列に置き換える |
+| search() | 最初にマッチした位置を返す |
+| slice() | 指定された部分文字列を返す |
+| split() | 文字列を配列にする |
+| toLowerCase() | 文字を小文字に変換する |
+| toUpperCase() | 文字を大文字に変換する |
+
+Dateコンストラクタのメンバー
+
+| メンバー | 説明 |
+| --- | --- |
+| Date.parse() | 日付の値を返す |
+
+```js
+Date.parse('May 4, 2008') //=> 1209826800000
+```
+
+Dateオブジェクトのメンバー
+
+| メンバー | 説明 |
+| --- | --- |
+| getFullYear() | 西暦の年を取得する |
+| setFullYear() | 西暦の年を設定する |
+| getMonth() | 月を取得する |
+| setMonth() | 月を設定する |
+| getDate() | 日を取得する |
+| setDate() | 日を設定する |
+
+その他にも、時間、分、秒、ミリ秒、曜日などを取得・設定できる。
+
+Mathオブジェクトのメンバー
+
+| メンバー | 説明 |
+| --- | --- |
+| Math.round() | 最も近い整数を返す |
+| Math.floor() | 切り捨てを行ない整数を返す |
+| Math.ceil() | 切り上げを行ない整数を返す |
+| Math.max() | 最も大きい数値を返す |
+| Math.min() | 最も小さい数値を返す |
+| Math.random() | 0から1の間のランダムな数値を返す |
+
+Errorオブジェクトの種類
+
+- Error
+- EvalError
+- RangeError
+- ReferenceError
+- SyntaxError
+- TypeError
+- URIError
