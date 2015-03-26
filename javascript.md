@@ -608,3 +608,59 @@ extend(Triangle, Shape);
 ```js
 Triangle.prototype = new Shape();
 ```
+
+ブラウザ環境
+
+ページ内でのオブジェクトモデルには以下の2つがある：
+
+- BOM: Browser Object Model
+  - ブラウザとPCの画面にアクセスするためのオブジェクト群
+  - `window`オブジェクト
+- DOM: Document Object Model
+  - ドキュメントをノードのツリーとして表す方法
+  - `window.document`によりアクセスする
+
+代表的なプロパティ
+
+- BOM
+  - `window.navigator`
+  - `window.location`
+  - `window.history`
+  - `window.screen`
+  - `window.alert()`/`window.prompt()`/`window.confirm()`
+  - `window.setTimeout()`/`window.setInterval()`
+  - `window.document`
+- DOM
+  - `document.cookie`
+  - `document.title`
+  - `document.referrer`
+  - `document.domain`
+
+- `addEventListener()`
+  - イベントを定義する
+  - jQueryでいうところの`on()`
+- `preventDefault()`
+  - 標準の挙動を止める
+
+```js
+var links = document.getElementsByTagName('a');
+
+for (var i; i < links.length; i++) {
+  links[i].addEventListener('click', function(e) {
+    if (!confirm('Are you sure?')) {
+      e.preventDefault();
+    }
+  });
+}
+```
+
+イベントの種類
+
+- マウス
+  - `mouseup`/`mousedown`/`click`/`mouseover`/`mouseout`/`mousemove`
+- キーボード
+  - `keydown`/`keypress`/`keyup`
+- ローディング/ウィンドウ
+  - `load`/`unload`/`beforeunload`/`abort`/`resize`/`scroll`/`contextmenu`
+- フォーム
+  - `focus`/`blur`/`change`/`select`/`reset`/`submit`
