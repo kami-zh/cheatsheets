@@ -664,3 +664,44 @@ for (var i; i < links.length; i++) {
   - `load`/`unload`/`beforeunload`/`abort`/`resize`/`scroll`/`contextmenu`
 - フォーム
   - `focus`/`blur`/`change`/`select`/`reset`/`submit`
+
+組み込み関数
+
+| 関数 | 説明 |
+| --- | --- |
+| parseInt() | 数値表現を返す |
+| parseFloat() | 浮動小数点の表現を返す |
+| isNaN() | 数値でない場合に`true`を返す |
+| encodeURI() | URLエンコードする |
+| decodeURI() | `encodeURI()`の逆の処理を行なう |
+| eval() | 文字列をコードとして実行する |
+
+Objectコンストラクタのメンバー
+
+| メンバー | 説明 |
+| --- | --- |
+| Object.prototype | すべてのオブジェクトのプロトタイプ |
+
+Objectオブジェクトのメンバー
+
+| メンバー | 説明 |
+| --- | --- |
+| constructor | Objectコンストラクタ関数への参照 |
+| toString() | 文字列表現を返す |
+| hasOwnProperty() | そのオブジェクト自身のプロパティであれば`true`を返す |
+| isPrototypeOf() | プロトタイプとして使用されている場合に`true`を返す |
+
+Arrayオブジェクトのメンバー
+
+| メンバー | 説明 |
+| --- | --- |
+| length | 配列の要素数を返す |
+| concat() | 複数の配列をマージする |
+| join() | 配列を文字列に変換する。引数はセパレータで、デフォルトはカンマ |
+| shift() | 配列の最初の要素を削除し、それを返す |
+| pop() | 配列の最後の要素を削除し、それを返す |
+| unshift() | 要素を配列の先頭に追加し、追加後の配列の長さを返す |
+| push() | 要素を配列の末尾に追加し、追加後の配列の長さを返す |
+| reverse() | 配列を逆順に並べ替える |
+| slice() | 配列の一部の要素を抜き出して返す |
+| sort() | 配列をソートする |
