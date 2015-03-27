@@ -505,3 +505,28 @@ I'm going to Rome when I have finished my Italian lessons.
   ```
   My glasses got broken while I was playing soccer.
   ```
+
+## 不定詞
+
+- 名詞的用法
+```
+Our plan is to climb the mountain tomorrow.
+To own a house is a dream of many Japanese.
+```
+- 形容詞的用法
+```
+I'm looking for someone to help me with my work.
+We were surprised at her decision to become an actress.
+```
+- 副詞的用法
+```
+She is working hard to buy a car.
+They came home to find that the window was broken.
+I'm very happy to meet you.
+```
+- SVO+`to`不定詞
+```
+I want you to be more careful.
+My mother told me to eat more vegetables.
+My father allowed me to study abroad.
+```
