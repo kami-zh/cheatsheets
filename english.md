@@ -530,3 +530,59 @@ I want you to be more careful.
 My mother told me to eat more vegetables.
 My father allowed me to study abroad.
 ```
+
+### 不定詞のさまざまな形
+
+- `seem to`/`appear to`
+  - Sは〜のようだ/Sは〜らしい
+  ```
+  My dog seems to understand English.
+  The children appeared to be happy.
+  ```
+- 完了形/進行形/受動態
+  - 完了形：`to have`+過去分詞
+  - 進行形：`to be`+動詞の`ing`形
+  - 受動態：`to be`+過去分詞
+  ```
+  The Romans seem to have built this castle.
+  The ship seems to be sinking!
+  I want to be left alone.
+  ```
+- `be to`
+  - 〜することになっている
+  - 〜すべきである
+  - 〜できる（否定の場合）
+  ```
+  The next meeting is to take place in Hong Kong.
+  You are to show your student card at the entrance.
+  Not a sound was to be heard.
+  ```
+- `too ... to`
+  - 〜するには…すぎる
+  ```
+  This curry is too spicy for me to eat.
+  ```
+- `enough to`
+  - 〜するのに十分な
+  ```
+  She was kind enough to carry my baggage.
+  ```
+- `so ... as to`
+  - 〜するほど
+  ```
+  She was so kind as to carry my baggage.
+  ```
+- `so as to`
+  - 目的をはっきりと示す
+  ```
+  I left early so as to avoid heavy traffic.
+  ```
+- 疑問詞+`to`
+  - 疑問詞の意味+〜すべきか
+  ```
+  You should teach your children how to swim.
+  I thought about who to invite to the party.
+  I don't know what to do next.
+  Do you know where to buy the tickets?
+  Ask your teacher when to start.
+  ```
