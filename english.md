@@ -451,3 +451,57 @@ I'm going to Rome when I have finished my Italian lessons.
   ```
   You'll never solve that problem. You might as well give up.
   ```
+
+## 受動態
+
+- 基本形
+  - `be`動詞+過去分詞
+  ```
+  This car was repaired by my brother.
+  ```
+- 助動詞
+  - 助動詞+`be`+過去分詞
+  ```
+  The book can be borrowed from the library.
+  The results of the election will be announced soon.
+  ```
+- 進行形
+  - `be`動詞+`being`+過去分詞
+  ```
+  The stadium is being built now.
+  ```
+- 完了形
+  - `have`/`has`/`had`+`been`+過去分詞
+  ```
+  This song has been sung by a lot of singers.
+  ```
+- 否定文
+  - `be`動詞+`not`+過去分詞
+  ```
+  His name was not found on the list.
+  ```
+  - 助動詞+`not be`+過去分詞
+  ```
+  Bad words must not be used in the classroom.
+  ```
+- 疑問文
+  - `be`動詞+主語+過去分詞 ...?
+  ```
+  Was this bag made in Italy?
+  ```
+- 疑問詞を使った疑問文
+  - 疑問詞が主語になる場合
+    - 疑問詞+`be`動詞+過去分詞
+    ```
+    Who was invited to the party?
+    ```
+  - 時や場所を尋ねる場合
+    - 疑問詞+`be`動詞+主語+過去分詞
+    ```
+    When was this bridge built?
+    ```
+- `get`を使った受動態
+  - `be`動詞の代わりに`get`を使うことで、変化を表す
+  ```
+  My glasses got broken while I was playing soccer.
+  ```
