@@ -789,3 +789,54 @@ Errorオブジェクトの種類
 - SyntaxError
 - TypeError
 - URIError
+
+正規表現
+
+正規表現のプロパティには次の3つがある：
+
+- `g`: global
+  - マッチするものをすべて見つける
+- `i`: ignoreCase
+  - 大文字小文字を無視する
+- `m`: multiline
+  - 行をまたいでマッチする
+
+| パターン | 説明 |
+| --- | --- |
+| [abc] | 文字クラス |
+| [a-z] | 範囲で指定された文字クラス |
+| [^abc] | 文字クラスに含まれない、すべての文字にマッチする |
+| a&#124;b | aかbにマッチする |
+| a(?=b) | aの条件に合い、後ろにbが続く文字列にマッチする |
+| a(?!b) | aの条件に合い、後ろにbが続かない文字列にマッチする |
+| \s | 半角スペース、またはいくつかのエスケープ文字（`\n`など）にマッチする |
+| \w | すべてのアルファベット、数字、アンダースコアにマッチする |
+| \d | 数値にマッチする |
+| ^ | 文字列の先頭にマッチする |
+| $ | 文字列の末尾にマッチする |
+| . | 改行以外のすべての文字にマッチする |
+| * | この記号の前のパターンが0個以上続く文字列にマッチする |
+| ? | この記号の前のパターンが0個もしくは1つある場合にマッチする |
+| + | この記号の前のパターンが1つ以上続く文字列にマッチする |
+| {n} | この記号の前のパターンがn回続く文字列にマッチする |
+
+```js
+var string = 'Hello, World!';
+
+string.match(/[elo]/g);            //=> ["e", "l", "l", "o", "o", "l"]
+string.match(/[A-Z]/g);            //=> ["H", "W"]
+string.match(/[^a-z]/g);           //=> ["H", ",", " ", "W", "!"]
+string.match(/H|W/g);              //=> ["H", "W"]
+string.match(/H(?=ello)/g);        //=> ["H"]
+string.match(/H(?!orld)/g);        //=> ["H"]
+string.match(/\s/g);               //=> [" "]
+string.match(/\w/g);               //=> ["H", "e", "l", "l", "o", "W", "o", "r", "l", "d"]
+string.match(/\d/g);               //=> null
+string.match(/^Hello/g);           //=> ["Hello"]
+string.match(/World!$/g);          //=> ["World!"]
+string.match(/./g);                //=> ["H", "e", "l", "l", "o", ",", " ", "W", "o", "r", "l", "d", "!"]
+string.match(/e.*d/g);             //=> ["ello, World"]
+string.match(/H?ello, A?World!/g); //=> ["Hello, World!"]
+string.match(/l+/g);               //=> ["ll", "l"]
+string.match(/l{2}/g);             //=> ["ll"]
+```
