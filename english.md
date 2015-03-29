@@ -586,3 +586,50 @@ My father allowed me to study abroad.
   Do you know where to buy the tickets?
   Ask your teacher when to start.
   ```
+
+## 動名詞
+
+名詞の働きをする、動詞の`ing`形のこと。
+
+- 基本形
+  - 動詞の`ing`形
+  ```
+  My hobby is taking pictures.
+  My grandfather enjoys playing golf.
+  She is good at baking cookies.
+  Not saying "thank you" is rude.
+  ```
+- 受動態
+  - `being`+過去分詞
+  ```
+  I don't like being treated like a child.
+  ```
+- 完了形
+  - `having`+過去分詞
+  ```
+  She is proud of having won a medal at the Olympics.
+  ```
+
+### 動名詞を使った重要表現
+
+- 不定詞を使わないように注意すべき表現
+  - `be used to`
+    - 〜することに慣れている
+  - `look forward to`
+    - 〜を楽しみに待つ
+  ```
+  The boy is used to making his own breakfast.
+  I'm looking forward to seeing you again.
+  ```
+- 慣用表現
+  - `There is no -ing`
+    - 〜できない
+  - `It is no use -ing`
+    - 〜しても無駄だ
+  - `Would you mind -ing?`
+    - 〜してもかまいませんか
+  ```
+  There is no knowing what will happen in the future.
+  It is no use worrying about the past.
+  Would you mind repeating that?
+  ```
