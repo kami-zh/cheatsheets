@@ -660,3 +660,56 @@ My father allowed me to study abroad.
   Do you remember locking the door?
   Please remember to lock the door.
   ```
+
+## 分詞
+
+動詞を変化させて、形容詞や副詞として働くもの。
+
+- 現在分詞
+  - する側とする行為を表す能動の関係
+- 過去分詞
+  - される側とされる行為を表す受動の関係
+
+```
+Who is the girl painting a picture over there?
+The picture painted by a little girl won the contest.
+```
+
+### 分詞が1語の場合
+
+分詞が1語の場合は名詞の前に置くことができる。
+
+```
+Someone is in that burning house!
+The police found the stolen money in the car.
+```
+
+### [`have`|`get`|`see`]+O+分詞
+
+- [`have`|`get`]
+  - 現在分詞
+    - Oを〜させる
+  - 過去分詞
+    - Oを〜される
+  ```
+  The comedian had the people laughing.
+  I had my hair cut at a famous beauty salon.
+  ```
+- `see`
+  - 現在分詞
+    - Oが〜しているのを見る
+  - 過去分詞
+    - Oが〜されるのを見る
+  ```
+  We saw a bird building a nest.
+  I saw a little girl scolded by her mother.
+  ```
+
+### 分詞構文
+
+副詞的に用いられた分詞のこと。
+
+```
+Bob was waiting for the bus reading a newspaper.
+Seen from a place, the island looks like a ship.
+```
