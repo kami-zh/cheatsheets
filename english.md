@@ -633,3 +633,30 @@ My father allowed me to study abroad.
   It is no use worrying about the past.
   Would you mind repeating that?
   ```
+
+### 動名詞と不定詞
+
+- 動名詞を目的語にする他動詞
+  - 他動詞+動詞の`ing`形
+  - すでに起こった事柄や実際の行為を表す
+  - `admit`/`avoid`/`consider`/`deny`/`enjoy`/`escape`/`finish`/`imagine`/`mind`/`miss`/`practice`/`quit`/`stop`/`suggest`/`give up`/`put off`
+  ```
+  You should avoid eating just before you go to bed.
+  I've given up looking for the cat.
+  ```
+- 不定詞を目的語にする他動詞
+  - 他動詞+`to`不定詞
+  - まだ起こっていない事柄を表す
+  - `care`/`decide`/`desire`/`expect`/`hope`/`manage`/`mean`/`offer`/`pretend`/`promise`/`refuse`/`want`/`wish`
+  ```
+  Masako has decided to study abroad.
+  I hope to go to Italy next year.
+  ```
+- 目的語が動名詞と不定詞で意味が異なる他動詞
+  - `forget`/`remember`/`regret`/`try`
+  ```
+  I'll never forget meeting her.
+  Don't forget to meet her.
+  Do you remember locking the door?
+  Please remember to lock the door.
+  ```
