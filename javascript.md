@@ -1,71 +1,231 @@
-後置インクリメント/デクリメント
+# JavaScript
+
+## 基本
+
+### 構文
+
+#### for
+
+繰り返しの処理を行なう。
+初期化、条件式、インクリメントの3つからなる。
 
 ```js
-var a = 1;
-b = a++;
-console.log(b); //=> 1
-c = b--;
-console.log(c); //=> 2
+var sum = 0;
+
+for (var i = 0; i < 10; i++) {
+  sum += i;
+}
+
+sum; //=> 45
 ```
 
-前置インクリメント/デクリメント
+#### for-in
+
+オブジェクトのプロパティに対して反復処理を行なう。
 
 ```js
-var a = 1;
-b = ++a;
-console.log(b); //=> 2
-c = --b;
-console.log(c); //=> 1
+var a = { a: 1, b: 2, c: 3 };
+
+for (key in a) {
+  a[key]; //=> 1 2 3
+}
 ```
 
-プリミティブデータ型
+#### while
 
-- Number: 数値。整数と浮動小数点数を含む。
-- String: 文字列。
-- Boolean: `true`と`false`。
-- undefined: 存在していない変数、または初期化していない変数にアクセスした場合に得られるもの。
-- null: 何もない、を表現するもの。
-
-以上に属さない値はオブジェクトとなる。
-ただし、`null`は「何もない」を表すオブジェクト。
-
-変数の型を知る
-
-`typeof`演算子は`number`、`string`、`boolean`、`undefined`、`object`、`function`のいずれかの文字列を返す。
+条件文の評価が`true`の間、コードブロックが実行され続ける。
 
 ```js
-console.log(typeof(null)); //=> object
+var i = 1;
+
+while (i < 10) {
+  i++;
+}
+
+i; //=> 10
 ```
 
-二重否定
+#### switch
 
-Boolean型に変換する簡単な方法として、`!!`を用いる方法がある。
+式を評価し、その式の値が`case`のラベルと一致する場合、それに関連づけられた文を実行する。
+
+- 各`case`に`break`をつける
+- オプションで`default`節をつけることができる
 
 ```js
-console.log(!!true); //=> true
-console.log(!!0);    //=> false
-console.log(!!NaN);  //=> false
+var a = 1,
+    b;
+
+switch(a) {
+  case 1:
+    b = 'foo';
+    break;
+  case 2:
+    b = 'bar';
+    break;
+  default:
+    b = 'baz';
+}
+
+b; //=> foo
 ```
 
-変数が未定義または`false`なら代入
+#### function
+
+関数を宣言する。
+
+- 明示的に`return`を書かなければ`undefined`が返る。
+- 引数の数が合わない場合：
+  - 足りなければ、残りの引数は`undefined`がセットされる
+  - 多ければ無視される
+
+```js
+function sum(a, b) {
+  return a + b;
+}
+
+sum(1, 2); //=> 3
+```
+
+##### arguments変数
+
+関数内では、引数が自動的に変数`arguments`にセットされる。
+
+```js
+function sum() {
+  var sum = 0;
+
+  for (key in arguments) {
+    sum += arguments[key];
+  }
+
+  return sum;
+}
+
+sum(1, 2, 3); //=> 6
+```
+
+### その他の基本
+
+#### falseガード
+
+変数が未定義または`false`の場合に値を代入する。
 
 ```js
 var a = a || 1;
-console.log(a); //=> 1
+
+a; //=> 1
 ```
 
-等価比較、等価比較および型比較
+#### 三項演算子
 
-`==`演算子は比較前に同じ方に変換される。
-変換しない場合は`===`を用いる。
+条件式に基づいて2つの値のうち1つを選択する。
 
 ```js
-var a = 1;
-var b = '1';
+var a = true ? 1 : 2;
 
-console.log(a == b);  //=> true
-console.log(a === b); //=> false
+a; //=> 1
 ```
+
+## プリミティブデータ型
+
+JavaScriptには、以下のデータ型がある：
+
+| データ型 | 説明 |
+| --- | --- |
+| Number | 数値。整数と浮動小数点を含む |
+| String | 文字列 |
+| Boolean | `true`と`false` |
+| undefined | 存在していない変数。または初期化していない変数にアクセスした場合に得られるもの |
+| null | なにもない、を表現するもの |
+
+以上に属さない値はオブジェクトとなる（ただし、`null`は「なにもない」を表すオブジェクトである）。
+
+### 型を判別する
+
+データの型は`typeof`演算子により判別する。
+
+```js
+typeof(null); //=> object
+```
+
+### 等価比較、等価比較および型比較
+
+`==`演算子は、比較前に同じ型に変換される。
+変換を意図しない場合は`===`を用いる。
+
+```js
+var a = 1,
+    b = '1';
+
+a == b;  //=> true
+a === b; //=> false
+```
+
+## Number
+
+### Number()
+
+`new`を使わず関数のように使うと、`parseInt()`や`parseFloat()`と同じ結果が得られる。
+
+```js
+Number('12.12'); //=> 12.12
+```
+
+### インクリメント/デクリメント
+
+インクリメント/デクリメントには後置、前置の2種類がある：
+
+```js
+// 後置
+var a = 1;
+var b = a++;
+var c = b--;
+b; //=> 1
+c; //=> 2
+
+// 前置
+var a = 1;
+var b = ++a;
+var c = --b;
+b; //=> 2
+c; //=> 1
+```
+
+## Boolean
+
+### Boolean()
+
+`new`を使わず関数のように使うと、Boolean型に変換できる。
+
+```js
+Boolean(true); //=> true
+Boolean(0);    //=> false
+Boolean(NaN);  //=> false
+```
+
+### 二重否定
+
+`Boolean()`の別の書き方として、`!!`を用いる方法がある。
+
+```js
+!!true; //=> true
+```
+
+## Array
+
+### 定義
+
+```js
+var a = [1, 2, 3];
+// または var a = new Array(1, 2, 3);
+
+a[4] = 5;
+a;    //=> [1, 2, 3, undefined, 5]
+a[3]; //=> undefined
+```
+
+---
 
 配列の定義・追加・削除
 
@@ -90,97 +250,6 @@ console.log(a); //=> [ 1, , 3, , 5 ]
 ```js
 var a = [];
 var a = new Array();
-```
-
-三項演算子
-
-```js
-var a = true ? 1 : 2;
-console.log(a); //=> 1
-```
-
-switch文
-
-- 各`case`に`break`をつける
-- オプションで`default`節をつけることができる
-
-```js
-var a = 1;
-var b = '';
-switch(a) {
-  case 1:
-    b = 'foo';
-    break;
-  case 2:
-    b = 'bar';
-    break;
-  default:
-    b = 'baz';
-}
-console.log(b); //=> foo
-```
-
-while文
-
-条件文の評価が`true`の間、コードブロックが実行され続ける。
-
-```js
-var i = 1;
-while (i < 10) {
-  i++;
-}
-console.log(i); //=> 10
-```
-
-for文
-
-初期化、条件式、インクリメントの3つからなる。
-
-```js
-var sum = 0;
-for (var i = 0; i < 10; i++) {
-  sum += i;
-}
-console.log(sum); //=> 45
-```
-
-for-in文
-
-```js
-var a = { a: 1, b: 2, c: 3 };
-for (key in a) {
-  console.log(a[key]); //=> 1 2 3
-}
-```
-
-関数
-
-- 明示的に`return`を書かなければ`undefined`が返る。
-- 引数の数が合わない場合：
-  - 足りなければ、残りの引数は`undefined`がセットされる
-  - 多ければ無視される
-
-```js
-function sum(a, b) {
-  return a + b;
-}
-console.log(sum(1, 2)); //=> 3
-```
-
-arguments変数
-
-関数内で、引数は自動的に`arguments`に格納される。
-ただし、引数があることが分かりづらくなるため、使用には注意が必要。
-
-```js
-function sum() {
-  var sum = 0;
-  for (key in arguments) {
-    sum += arguments[key];
-  }
-  return sum;
-}
-console.log(sum(1, 2, 3)); //=> 6
 ```
 
 定義済み関数
