@@ -214,7 +214,7 @@ Boolean(NaN);  //=> false
 
 ## Array
 
-### 定義
+### 定義・追加・削除
 
 ```js
 var a = [1, 2, 3];
@@ -223,90 +223,14 @@ var a = [1, 2, 3];
 a[4] = 5;
 a;    //=> [1, 2, 3, undefined, 5]
 a[3]; //=> undefined
-```
-
----
-
-配列の定義・追加・削除
-
-配列は`[]`で定義する。
-新しい要素を追加する際はインデックスを指定する。
-このとき、既存の要素との間に隙間があると`undefined`が割り当てられる。
-要素の削除は`delete()`で行なう。
-
-```js
-var a = [1, 2, 3];
-
-a[4] = 5;
-console.log(a);    //=> [ 1, 2, 3, , 5 ]
-console.log(a[3]); //=> undefined
 
 delete(a[1]);
-console.log(a); //=> [ 1, , 3, , 5 ]
+a; //=> [1, undefined, 3, undefined, 5]
 ```
 
-以下は同じ意味。
+## Function
 
-```js
-var a = [];
-var a = new Array();
-```
-
-定義済み関数
-
-parseInt() / parseFload()
-
-数値への変換を試みる。
-最初に未知の文字が現れた時点で変換を諦める。
-
-```js
-console.log(parseInt('123'));    //=> 123
-console.log(parseInt('abc123')); //=> NaN
-console.log(parseInt('1abc23')); //=> 1
-console.log(parseInt('123abc')); //=> 123
-console.log(parseFloat('123'));        //=> 123
-console.log(parseFloat('1.23'));       //=> 1.23
-console.log(parseFloat('1.23abc.00')); //=> 1.23
-console.log(parseFloat('a.bc1.23'));   //=> NaN
-```
-
-isNaN()
-
-NaNかどうかをチェックする。
-
-```js
-console.log(isNaN(NaN)); //=> true
-console.log(isNaN(123)); //=> false
-console.log(isNaN(parseInt('abc123'))); //=> true
-```
-
-encodeURI()
-
-URIをエスケープする。
-
-```js
-console.log(encodeURI('http://www.example.com/?q=this and that'));
-//=> http://www.example.com/?q=this%20and%20that
-```
-
-変数のスコープ
-
-- `var`で定義すると、それより下位のブロックからアクセスできる
-- `var`を省略して定義すると、自動的にグローバルスコープとして作成される
-
-```js
-var a = 1;
-function foo() {
-  var b = 2;
-  c = 3;
-  return a;
-}
-console.log(foo()); //=> 1
-console.log(b);     //=> ReferenceError: b is not defined
-console.log(c);     //=> 3
-```
-
-関数もデータ
+### データとしての関数
 
 以下の2通りの定義方法はまったく同じ結果を得る。
 
@@ -314,40 +238,47 @@ console.log(c);     //=> 3
 function sum(a, b) {
   return a + b;
 }
+
 var sum = function(a, b) { return a + b; }
+
 sum(1, 2); //=> 3
 ```
 
-無名関数
+### 無名関数
 
-コールバック関数
+無名関数とは、名前づけされずに定義された関数のこと。
+
+#### コールバック関数
+
+コールバック関数とは、引数として渡す関数のこと。
+以下のメリットがある：
 
 - グローバル変数を減らすことができる
 - 関数呼び出しの責任を委譲できる
 
 ```js
 function sum(a, b, callback) {
-  var sum = a + b;
-  return callback(sum);
+  return callback(a + b);
 }
-sum(10, 20, function(sum) { return sum + 1 }) //=> 31
+
+sum(1, 2, function(c) { return c + 1 }); //=> 4
 ```
 
-自己実行可能関数
+#### 自己実行可能関数
 
+自己実行可能関数とは、定義と呼び出しを同時に行なう関数のこと。
 一度だけ実行される処理（初期化など）に適している。
 
 ```js
-(
-  function(name) {
-    return name;
-  }
-)('taro') //=> taro
+(function(name) {
+  return name;
+})('taro'); //=> taro
 ```
 
-プライベート関数
+#### プライベート関数
 
-- グローバルの名前空間を汚染しない（グローバルでは`b()`は見えない）
+グローバルの名前空間を汚染しないために、プライベート関数を定義することができる。
+以下の例では、トップレベルから`b()`は見えない。
 
 ```js
 function a(x) {
@@ -357,127 +288,154 @@ function a(x) {
 
   return b(x);
 }
-a(2);
+
+a(2); //=> 4
 ```
 
-関数を返す関数
+#### 関数を返す関数
 
 ```js
-function a() {
-  return function() {
-    return 1;
+function a(x) {
+  return function(y) {
+    return x + y;
   }
 }
-a()();
+
+a(1)(2); //=> 3
 ```
 
-自分自身を書き換える関数
+#### 自分自身を書き換える関数
 
-一度しか実行させたくない関数を定義する場合に有用。
+一度しか実行させたくない処理などに適している。
 
 ```js
 function increment() {
   var x = 0;
+
   increment = function() {
     return x;
   }
+
   return ++x;
 }
+
 increment(); //=> 1
 increment(); //=> 1
 ```
 
-スコープ
+### スコープ
 
-- 関数`b()`の中では、`a`と`c`の両方が見える
-- 関数`b()`の外では、`a`は見えるが`c`は見えない
+スコープとは、変数や関数にアクセスできる範囲のこと。
+
+- `var`で定義すると、それより下位のブロックからアクセスできる
+- `var`を省略して定義すると、グローバルスコープとして作成される
 
 ```js
-var a = 'foo';
-function b() {
-  var c = 'bar';
+var a = 1;
+
+function foo() {
+  var b = 2;
+  c = 3;
   return a;
-};
-b(); //=> foo
-c;   //=> c is not defined
+}
+
+foo(); //=> 1
+b;     //=> ReferenceError: b is not defined
+c;     //=> 3
 ```
 
-また、関数の中でネストされた関数を定義すると、ネストされた関数は親のスコープの変数にもアクセスできる（スコープチェーン）。
+関数の中でネストされた関数を定義すると、ネストされた関数は親のスコープの変数にもアクセスできる（スコープチェーン）。
 
-レキシカルスコープ
+#### レキシカルスコープ
 
-関数の定義時にスコープが作られる。
-以下の場合、最初の`a()`実行時には`b()`から`c`は見えない。
+レキシカルスコープとは、関数の定義時にスコープがつくられる性質のこと。
 
 ```js
 function a() {
   var c = 1;
   return b();
 }
+
 function b() {
   return c;
 }
-a(); //=> c is not defined
+
+a(); //=> ReferenceError: c is not defined
+
 var c = 2;
+
 a(); //=> 2
 ```
 
-クロージャ
+### クロージャ
 
 クロージャとは、外側のスコープ内の変数を参照する、内側の関数のこと。
-次の例では、`increment()`内の無名関数がクロージャ。
 クロージャにより、「状態を保持する関数を定義する」ことができる。
+
+次の例では、`increment()`内の無名関数がクロージャとなる。
 
 ```js
 function increment() {
   var x = 0;
+
   return function() {
     return ++x;
-  };
-};
-f = increment();
+  }
+}
+
+var f = increment();
+
 f(); //=> 1
 f(); //=> 2
 f(); //=> 3
 ```
 
-ゲッター/セッター
+#### ゲッター・セッター
 
-クロージャにより、変数`myName`を関数内部に保持しつつ、取得・書き換えを行なうことができる。
+クロージャにより、変数を関数内部に保持しつつ、取得・書き換えを行なうことができる。
 
 ```js
 var getName;
 var setName;
+
 (function() {
   var myName;
+
   getName = function() {
     return myName;
   };
+
   setName = function(name) {
     myName = name;
-  };
-})()
+  }
+})();
+
 getName();       //=> undefined
 setName('taro');
 getName();       //=> taro
 ```
 
-イテレータ
+#### イテレータ
 
 クロージャにより、イテレータを定義できる。
 
 ```js
 function setup(x) {
   var i = 0;
+
   return function() {
     return x[i++];
-  }
+  };
 }
-var f = setup(['a', 'b', 'c']);
-f(); //=> a
-f(); //=> b
-f(); //=> c
+
+var f = setup([1, 2, 3]);
+
+f(); //=> 1
+f(); //=> 2
+f(); //=> 3
 ```
+
+---
 
 オブジェクト
 
