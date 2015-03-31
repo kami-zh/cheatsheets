@@ -435,82 +435,65 @@ f(); //=> 2
 f(); //=> 3
 ```
 
----
+## オブジェクト
 
-オブジェクト
+オブジェクトとは、あるものを表現するために、いくつかのプロパティやメソッドを持ったもの。
 
-基本的にドット記法でアクセスする。
+オブジェクトの属性には基本的にドット記法でアクセスする。
 動的にアクセスする場合や、キーにクォートが必要な場合のみ`[]`でアクセスする。
 
 ```js
 var object = {
   a: 1,
   b: function() {
-    return 2;
+    return this.a;
   }
 }
-object.a    //=> 1
-object['a'] //=> 1
-object.b()  //=> 2
-typeof(object) //=> object
+
+object.a;    //=> 1
+object['a']; //=> 1
+object.b();  //=> 1
 ```
 
-以下は同じ意味。
+### コンストラクタ関数
 
-```js
-var o = {};
-var o = new Object();
-```
-
-thisによるアクセス
-
-```js
-var human = {
-  name: 'taro',
-  say: function() {
-    return this.name;
-  }
-}
-human.say(); //=> taro
-```
-
-コンストラクタ関数
+コンストラクタ関数によりオブジェクトを定義すると、`new`によりそのインスタンスを生成できる。
 
 ```js
 function Hero(name) {
   this.name = name;
+
   this.attack = function() {
     return 'attacked';
-  };
-};
+  }
+}
+
 var hero = new Hero('taro');
+
 hero.name;     //=> taro
 hero.attack(); //=> attacked
 ```
 
-instanceof演算子
-
-```js
-hero instanceof Hero //=> true
-```
-
-別のオブジェクトを返す関数
-
-関数の返り値として別のオブジェクトを定義した場合、関数自身のオブジェクトは返らない。
+### 別のオブジェクトを返す関数
 
 ```js
 function Hero(name) {
   this.name = name;
+
   return {
     attack: function() {
       return 'attacked';
     }
   }
-};
+}
+
 var hero = new Hero('taro');
+
 hero.name;     //=> undefined
 hero.attack(); //=> attacked
 ```
+
+---
 
 組み込みオブジェクト
 
