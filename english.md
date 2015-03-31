@@ -713,3 +713,84 @@ The police found the stolen money in the car.
 Bob was waiting for the bus reading a newspaper.
 Seen from a place, the island looks like a ship.
 ```
+
+## 比較
+
+1音節の語は`-er`/`-est`型、それ以外の語および`-ly`で終わる副詞は`more`/`most`型となる。
+
+| 変化の種類 | 原級 | 比較級 | 最上級 |
+| --- | --- | --- | --- |
+| 規則変化：`-er`/`-est`型 | `tall` | `taller` | `tallest` |
+| 規則変化：`more`/`most`型 | `careful` | `more careful` | `most careful` |
+| 不規則変化 | `good` | `better` | `best` |
+
+### 原級を使った比較
+
+- 〜と同じくらい…だ
+  - `as`+形容詞の原級+`as`
+- 〜ほど…ではない
+  - `not`+[`as`|`so`]+形容詞の原級+`as`
+- 〜と同じくらい…の
+  - `as`+形容詞+名詞+`as`
+- 〜のX倍…だ
+  - 倍数+`as … as`
+- できるだけ…
+  - `as … as possible`または`as ... as`+S+`can`
+
+```
+My brother is as tall as my father.
+I don't sing as well as my sister.
+I have as many books as you.
+This room is twice as large as that one.
+Call the doctor as soon as possible!
+The doctor came as quickly as he could.
+```
+
+### 比較級を使った比較
+
+- 〜より…だ
+  - 比較級+`than`
+- 〜より…ということはない
+  - `not`+比較級を使った比較
+- 差が大きい/小さいことを表す
+  - `much`/`a little`など+比較級を使った比較
+- 〜ほど…でない
+  - `less`+形容詞/副詞+`than`
+
+```
+This stone is heavier than that one.
+He is not younger than my father.
+This house is much larger than mine.
+This car is less expensive than that one.
+```
+
+### 最上級を使った比較
+
+- 〜の中でもっとも…だ
+  - `the`+最上級
+- はるかに…だ
+  - `by far`+最上級を使った比較
+- もっとも…でない
+  - `the least`+[形容詞|副詞]
+- もっとも…なものの1つ
+  - `one of the`+形容詞の最上級+複数形の名詞
+- X番目に…だ
+  - X番を表す句+形容詞の最上級+単数形の名詞
+
+```
+He is the fastest sprinter in this school.
+She is by far the best singer in this country.
+This is the least expensive computer in this store.
+This is the nicest rooms in the hotel.
+Henry is the second tallest student in this class.
+```
+
+### 比較のさまざまな表現
+
+#### 原級
+
+#### 比較級
+
+#### noを使った比較表現
+
+#### 最上級
