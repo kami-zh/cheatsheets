@@ -493,9 +493,159 @@ hero.name;     //=> undefined
 hero.attack(); //=> attacked
 ```
 
----
+## プロトタイプ
 
-組み込みオブジェクト
+関数を定義すると、同時に`prototype`プロパティが生成される。
+これはコンストラクタとして利用した場合のみに使われ、元の関数自身にはなにも影響を与えない。
+
+```js
+function Foo() {
+  this.say = function() {
+    return this.name;
+  }
+}
+
+Foo.prototype = {
+  name: 'foo'
+}
+
+foo = new Foo();
+foo.say(); //=> foo
+```
+
+### 組み込みオブジェクトの拡張
+
+```js
+String.prototype.reverse = function() {
+  return Array.prototype.reverse.apply(this.split('')).join('');
+}
+
+'taro'.reverse();
+```
+
+### 継承
+
+```js
+function Shape() {};
+
+Shape.prototype = {
+  name: 'Shape',
+
+  toString: function() {
+    return this.name;
+  }
+}
+
+function Triangle(side, height) {
+  this.side = side;
+  this.height = height;
+}
+
+// 継承
+Triangle.prototype = Shape.prototype;
+Triangle.prototype.constructor = Triangle;
+
+// 拡張
+Triangle.prototype.name = 'Triangle';
+Triangle.prototype.getArea = function() {
+  return this.side * this.height / 2;
+}
+
+var triangle = new Triangle(5, 10);
+
+triangle.toString(); //=> Triangle
+triangle.getArea();  //=> 25
+```
+
+#### newによる継承
+
+以下の方法は、継承だけのために新しいオブジェクトを生成してしまう。
+また、プロトタイプだけでなく親の関数自体も継承してしまう。
+
+```js
+Triangle.prototype = new Shape();
+```
+
+#### extend()による継承
+
+単に親オブジェクトのプロトタイプを継承するだけの場合、子オブジェクトのプロトタイプの変更が親にも反映されてしまう。
+つまり、親オブジェクトを継承する他のオブジェクトにも影響を及ぼしてしまう。
+これを防ぐには、以下のような`extend()`関数を定義する。
+
+```js
+function extend(Child, Parent) {
+  var F = function() {};
+  F.prototype = Parent.prototype;
+  Child.prototype = new F();
+  Child.prototype.constructor = Child;
+  Child.uber = Parent.prototype;
+}
+
+// 継承
+// Triangle.prototype = Shape.prototype;
+// Triangle.prototype.constructor = Triangle;
+extend(Triangle, Shape);
+```
+
+## ブラウザ環境
+
+### BOMとDOM
+
+ページ内でのオブジェクトモデルには、以下の2つがある：
+
+- BOM: Browser Object Model
+  - ブラウザとPCの画面にアクセスするためのオブジェクト群
+  - `window`によりアクセスする
+- DOM: Document Object Model
+  - ドキュメントをノードのツリーとして表す方法
+  - `window.document`によりアクセスする
+
+### 代表的なプロパティ
+
+- BOM
+  - `window.navigator`
+  - `window.location`
+  - `window.history`
+  - `window.screen`
+  - `window.alert()`/`window.prompt()`/`window.confirm()`
+  - `window.setTimeout()`/`window.setInterval()`
+  - `window.document`
+- DOM
+  - `document.cookie`
+  - `document.title`
+  - `document.referrer`
+  - `document.domain`
+- その他
+  - `AddEventListener()`
+    - イベントを定義する
+    - jQueryでいうところの`on()`
+  - `preventDefault()`
+    - 標準の挙動を止める
+
+#### 例
+
+```js
+var links = document.getElementsByTagName('a');
+
+for (var i; i < links.length; i++) {
+  links[i].addEventListener('click', function(e) {
+    if (!confirm('Are you sure')) {
+      e.preventDefault();
+    }
+  });
+}
+```
+
+### イベントの種類
+
+| 種類 | イベント |
+| --- | --- |
+| マウス | `mouseup`/`mousedown`/`click`/`mouseover`/`mouseout`/`mousemove` |
+| キーボード | `keydown`/`keypress`/`keyup` |
+| ウィンドウ | `load`/`unload`/`beforeunload`/`abort`/`resize`/`scroll`/`contextmenu` |
+| フォーム | `focus`/`blur`/`change`/`select`/`reset`/`submit` |
+
+## 組み込みオブジェクト
 
 - データラッパーオブジェクト
   - Object
@@ -511,171 +661,7 @@ hero.attack(); //=> attacked
 - エラーオブジェクト
   - Error
 
-[ToDo] 組み込みオブジェクトの使い方をまとめる（メンバーを含む）
-
-Boolean
-
-`new`を使わず関数のように使うと、`!!`と同じ結果が得られる。
-
-```js
-Boolean('foo');      //=> true
-Boolean('undefined') //=> false
-```
-
-Number
-
-`new`を使わず関数のように使うと、`parseInt()`や`parseFloat()`と同じ結果が得られる。
-
-```js
-Number('12.12'); //=> 12.12
-```
-
-プロトタイプ
-
-関数を定義すると、同時に`prototype`プロパティが生成される。
-これはコンストラクタとして利用した場合のみ使われ、元の関数`Foo()`自身にはなにも影響を与えない。
-
-```js
-function Foo() {
-  this.say = function() {
-    return this.name;
-  }
-};
-
-Foo.prototype = {
-  name: 'foo'
-}
-
-foo = new Foo();
-foo.say(); //=> foo
-```
-
-組み込みオブジェクトの拡張
-
-```js
-String.prototype.reverse = function() {
-  return Array.prototype.reverse.apply(this.split('')).join('');
-}
-
-'taro'.reverse(); //=> orat
-```
-
-継承
-
-```js
-function Shape() {};
-
-Shape.prototype = {
-  name: 'Shape',
-  toString: function() {
-    return this.name;
-  }
-};
-
-function Triangle(side, height) {
-  this.side = side;
-  this.height = height;
-};
-
-// 継承
-Triangle.prototype = Shape.prototype;
-Triangle.prototype.constructor = Triangle;
-
-// 拡張
-Triangle.prototype.name = 'Triangle';
-Triangle.prototype.getArea = function() {
-  return this.side * this.height / 2;
-};
-
-var triangle = new Triangle(5, 10);
-
-triangle.toString(); //=> Triangle
-triangle.getArea;    //=> 25
-```
-
-上記の方法では、`Triangle.prototype`への変更が`Shape.prototype`にも反映されてしまう。
-つまり、`Shape`を継承する他のオブジェクトがある場合、意図しない動作をしてしまうおそれがある。
-これを防ぐには、以下のような`extend()`関数を定義する。
-
-```js
-function extend(Child, Parent) {
-  var F = function() {};
-  F.prototype = Parent.prototype;
-  Child.prototype = new F();
-  Child.prototype.constructor = Child;
-  Child.uber = Parent.prototype;
-};
-
-// 継承
-// Triangle.prototype = Shape.prototype;
-// Triangle.prototype.constructor = Triangle;
-extend(Triangle, Shape);
-```
-
-継承は以下の方法でもできるが、これは継承のためだけに新しいオブジェクトを生成してしまう。
-また、プロトタイプだけでなく`Shape()`自体も継承してしまう。
-
-```js
-Triangle.prototype = new Shape();
-```
-
-ブラウザ環境
-
-ページ内でのオブジェクトモデルには以下の2つがある：
-
-- BOM: Browser Object Model
-  - ブラウザとPCの画面にアクセスするためのオブジェクト群
-  - `window`オブジェクト
-- DOM: Document Object Model
-  - ドキュメントをノードのツリーとして表す方法
-  - `window.document`によりアクセスする
-
-代表的なプロパティ
-
-- BOM
-  - `window.navigator`
-  - `window.location`
-  - `window.history`
-  - `window.screen`
-  - `window.alert()`/`window.prompt()`/`window.confirm()`
-  - `window.setTimeout()`/`window.setInterval()`
-  - `window.document`
-- DOM
-  - `document.cookie`
-  - `document.title`
-  - `document.referrer`
-  - `document.domain`
-
-- `addEventListener()`
-  - イベントを定義する
-  - jQueryでいうところの`on()`
-- `preventDefault()`
-  - 標準の挙動を止める
-
-```js
-var links = document.getElementsByTagName('a');
-
-for (var i; i < links.length; i++) {
-  links[i].addEventListener('click', function(e) {
-    if (!confirm('Are you sure?')) {
-      e.preventDefault();
-    }
-  });
-}
-```
-
-イベントの種類
-
-- マウス
-  - `mouseup`/`mousedown`/`click`/`mouseover`/`mouseout`/`mousemove`
-- キーボード
-  - `keydown`/`keypress`/`keyup`
-- ローディング/ウィンドウ
-  - `load`/`unload`/`beforeunload`/`abort`/`resize`/`scroll`/`contextmenu`
-- フォーム
-  - `focus`/`blur`/`change`/`select`/`reset`/`submit`
-
-組み込み関数
+### 組み込み関数
 
 | 関数 | 説明 |
 | --- | --- |
@@ -686,13 +672,13 @@ for (var i; i < links.length; i++) {
 | decodeURI() | `encodeURI()`の逆の処理を行なう |
 | eval() | 文字列をコードとして実行する |
 
-Objectコンストラクタのメンバー
+### Objectコンストラクタのメンバー
 
 | メンバー | 説明 |
 | --- | --- |
 | Object.prototype | すべてのオブジェクトのプロトタイプ |
 
-Objectオブジェクトのメンバー
+### Objectオブジェクトのメンバー
 
 | メンバー | 説明 |
 | --- | --- |
@@ -701,7 +687,7 @@ Objectオブジェクトのメンバー
 | hasOwnProperty() | そのオブジェクト自身のプロパティであれば`true`を返す |
 | isPrototypeOf() | プロトタイプとして使用されている場合に`true`を返す |
 
-Arrayオブジェクトのメンバー
+### Arrayオブジェクトのメンバー
 
 | メンバー | 説明 |
 | --- | --- |
@@ -716,31 +702,20 @@ Arrayオブジェクトのメンバー
 | slice() | 配列の一部の要素を抜き出して返す |
 | sort() | 配列をソートする |
 
-Functionオブジェクトのメンバー
+### Functionオブジェクトのメンバー
 
 | メンバー | 説明 |
 | --- | --- |
 | apply() | 関数の`this`を書き換えた上で呼び出す |
 | call() | 引数を配列ではなく1つずつ受け取る以外は`apply()`と同じ |
 
-```js
-function foo() {
-  return this.toString();
-};
-
-var myObject = {};
-
-foo.apply();         //=> [object Window]
-foo.apply(myObject); //=> [object Object]
-```
-
-Numberコンストラクタのメンバー
+### Numberコンストラクタのメンバー
 
 | メンバー | 説明 |
 | --- | --- |
 | Number.NaN | 数値ではないことを表すオブジェクト |
 
-Stringオブジェクトのメンバー
+### Stringオブジェクトのメンバー
 
 | メンバー | 説明 |
 | --- | --- |
@@ -756,17 +731,17 @@ Stringオブジェクトのメンバー
 | toLowerCase() | 文字を小文字に変換する |
 | toUpperCase() | 文字を大文字に変換する |
 
-Dateコンストラクタのメンバー
+### Dateコンストラクタのメンバー
 
 | メンバー | 説明 |
 | --- | --- |
 | Date.parse() | 日付の値を返す |
 
 ```js
-Date.parse('May 4, 2008') //=> 1209826800000
+Date.parse('May 4, 2008'); //=> 1209826800000
 ```
 
-Dateオブジェクトのメンバー
+### Dateオブジェクトのメンバー
 
 | メンバー | 説明 |
 | --- | --- |
@@ -779,7 +754,7 @@ Dateオブジェクトのメンバー
 
 その他にも、時間、分、秒、ミリ秒、曜日などを取得・設定できる。
 
-Mathオブジェクトのメンバー
+### Mathオブジェクトのメンバー
 
 | メンバー | 説明 |
 | --- | --- |
@@ -789,6 +764,8 @@ Mathオブジェクトのメンバー
 | Math.max() | 最も大きい数値を返す |
 | Math.min() | 最も小さい数値を返す |
 | Math.random() | 0から1の間のランダムな数値を返す |
+
+---
 
 エラー処理
 
