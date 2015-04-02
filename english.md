@@ -789,8 +789,45 @@ Henry is the second tallest student in this class.
 
 #### 原級
 
+- AというよりはむしろB
+  - `not so much A as B`
+- あいかわらず…
+  - `as … as ever`
+- ますます…
+  - 比較級+`and`+比較級
+- …すればするほど、ますます〜
+  - `the`+比較級+`S V …, the`+比較級+`S V〜`
+- ますます…
+  - `all the`+比較級
+
+```
+The drama was not so much a tragedy as a comedy.
+She looks as cheerful as ever.
+The tree is growing taller and taller.
+The more I study, the more I know.
+We respect him all the more for his honesty.
+```
+
 #### 比較級
+
+- 多かれ少なかれ
+  - `more or less`
+- 遅かれ早かれ
+  - `sooner or later`
+- 〜するほど愚かではない
+  - `know better than to do`
+
+```
+Our guess was more or less correct.
+Sooner or later you will find a good solution.
+I know better than to go sailing without a life jacket.
+```
 
 #### noを使った比較表現
 
-#### 最上級
+- 〜ほども多く
+  - `no less than`+数詞
+
+```
+She paid me no less than 30,000 yen for the work.
+```
