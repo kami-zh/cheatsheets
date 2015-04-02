@@ -587,6 +587,31 @@ function extend(Child, Parent) {
 extend(Triangle, Shape);
 ```
 
+## Errorオブジェクト
+
+### Errorオブジェクトの種類
+
+- Error
+- EvalError
+- RangeError
+- ReferenceError
+- SyntaxError
+- TypeError
+- URIError
+
+### 例外処理
+
+`catch`文の変数`e`にはErrorオブジェクトが格納される。
+Errorオブジェクトには`name`と`message`の2つのプロパティが定義されている。
+
+```js
+try {
+  iDontExist();
+} catch (e) {
+  alert(e.name + ': ' + e.message); //=> ReferenceError: iDontExist is not defined
+}
+```
+
 ## ブラウザ環境
 
 ### BOMとDOM
@@ -766,28 +791,6 @@ Date.parse('May 4, 2008'); //=> 1209826800000
 | Math.random() | 0から1の間のランダムな数値を返す |
 
 ---
-
-エラー処理
-
-エラーが表示される=予期していないエラーが発生した、ということ。
-予期しているエラーは`try`/`catch`で捕捉する。
-
-```js
-try {
-  iDontExist();
-} catch (e) {
-}
-```
-
-Errorオブジェクトの種類
-
-- Error
-- EvalError
-- RangeError
-- ReferenceError
-- SyntaxError
-- TypeError
-- URIError
 
 正規表現
 
