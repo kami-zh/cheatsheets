@@ -831,3 +831,82 @@ I know better than to go sailing without a life jacket.
 ```
 She paid me no less than 30,000 yen for the work.
 ```
+
+## 関係詞
+
+### 関係代名詞
+
+| 先行詞 | 主格 | 所有格 | 目的格 |
+| --- | --- | --- | --- |
+| 人 | who | whose | who(m) |
+| 人以外 | which | whose | which |
+| 人・人以外 | that | - | that |
+
+```
+I have a friend who lives in Boston.
+They live in a house which stands on a hill.
+The man whom I met on a street works at a bank.
+I'm reading a book which I borrowed from the library.
+I have a friend whose wife is a singer.
+I'm looking for a book whose subject is jazz.
+I lent him the money that was in my pocket.
+Where is the CD that I bought yesterday?
+```
+
+#### 継続用法
+
+関係代名詞の前に`,`を置く用法を継続用法といい、補足説明を表す。
+
+```
+He married my sister, who(m) he met at the hospital.
+```
+
+### 関係副詞
+
+| 先行詞 | 場所を表す語 | 時を表す語 | reason(s) | その他 |
+| --- | --- | --- | --- |
+| 関係副詞 | where | when | why | how |
+
+```
+This is the hospital where my aunt works.
+There was a time when dinosaurs lived on the earth.
+Tell me the reason why you look so happy today.
+That's how he succeeded in business.
+```
+
+### 複合関係詞
+
+関係詞に`-ever`がついたものを複合関係代名詞、複合関係副詞といい、「〜ならどんなものでも」という意味になる。
+
+| 複合関係代名詞 | 意味 |
+| --- | --- |
+| whoever | 〜する人は誰でも |
+| whichever | 〜するものはどれでも |
+| whatever | 〜するものはなんでも |
+
+| 複合関係副詞 | 意味 |
+| --- | --- |
+| however | どれほど〜でも |
+| whenever | 〜するときはいつでも |
+| wherever | 〜するところならどこでも |
+
+```
+The club admits whoever pays the entry fee.
+Help yourself to whichever you want.
+You can order whatever you like.
+On holidays, we can get up whenever we want to.
+Put the table wherever you like.
+However tired she is, she always smiles.
+```
+
+### whatを使った慣用表現
+
+| 慣用表現 | 意味 |
+| --- | --- |
+| what is called … | いわゆる… |
+| what is more | そのうえ |
+
+```
+This music is what is called "rap".
+He plays the piano, and what is more, he sings very well.
+```
