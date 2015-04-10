@@ -6,15 +6,12 @@
 
 ```ruby
 def random_array(n, max = 100)
-  array = []
-  n.times do |i|
-    array[i] = rand(max + 1)
-  end
-
-  array
+  a = []
+  n.times { |i| a[i] = rand(max + 1) }
+  a
 end
 
-a = random_array(100) #=> [89, 75, 85, 3, 91, 19, 61, 0, 65, 1, 97, 44, 45, 69, 91, 73, 61, 6, 27, 76, 52, 57, ...]
+random_array(100) #=> [89, 75, 85, 3, 91, 19, 61, 0, 65, 1, 97, 44, 45, 69, 91, 73, 61, 6, 27, 76, 52, 57, ...]
 ```
 
 ## ソート
