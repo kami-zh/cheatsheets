@@ -65,3 +65,32 @@ def selection_sort(a)
   a
 end
 ```
+
+### 挿入ソート
+
+i番目とi+1番目の要素を比較し、順序が逆であれば入れ替える。
+また、i+1番目だった要素を適切な位置まで入れ替え続ける（挿入する）。
+
+```ruby
+def insertion_sort(a)
+  n = a.size - 1
+
+  for i in 1..n
+    if a[i] < a[i - 1]
+      j = i
+      x = a[j]
+      while (j > 0) && (a[j - 1] > x)
+        if a[j] < a[j - 1]
+          tmp = a[j]
+          a[j] = a[j - 1]
+          a[j - 1] = tmp
+        end
+
+        j -= 1
+      end
+    end
+  end
+
+  a
+end
+```
