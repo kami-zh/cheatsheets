@@ -915,7 +915,7 @@ He plays the piano, and what is more, he sings very well.
 
 | 名前 | 意味 | 形 |
 | --- | --- | --- |
-| 仮定法過去 | もし〜なら、…だろうに | If+S+動詞の過去形, [would&#124;could&#124;might]+動詞の原形 |
+| 仮定法過去 | もし〜なら、…だろうに | If+S+動詞の過去形, S+[would&#124;could&#124;might]+動詞の原形 |
 | 仮定法過去完了 | もし〜だったなら、…だったろうに | If+S+動詞の過去完了形, S+[would&#124;could&#124;might]+have+過去分詞 |
 
 ```
