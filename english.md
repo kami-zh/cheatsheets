@@ -910,3 +910,29 @@ However tired she is, she always smiles.
 This music is what is called "rap".
 He plays the piano, and what is more, he sings very well.
 ```
+
+## 仮定法
+
+| 名前 | 意味 | 形 |
+| --- | --- | --- |
+| 仮定法過去 | もし〜なら、…だろうに | If+S+動詞の過去形, [would&#124;could&#124;might]+動詞の原形 |
+| 仮定法過去完了 | もし〜だったなら、…だったろうに | If+S+動詞の過去完了形, S+[would&#124;could&#124;might]+have+過去分詞 |
+
+```
+If he were ready, we would go.
+If I had left ten minutes earlier, I would not have missed the train.
+```
+
+### その他の仮定法
+
+| 形 | 意味 |
+| --- | --- |
+| wish | 〜[なら&#124;だったら]なあ |
+| as if | まるで〜で[ある&#124;あった]かのように |
+| if only | 〜でありさえすれば |
+
+```
+I wish I knew her telephone number.
+He talks as if he were an expert in economics.
+If only she were here!
+```
