@@ -936,3 +936,51 @@ I wish I knew her telephone number.
 He talks as if he were an expert in economics.
 If only she were here!
 ```
+
+## 疑問詞と疑問文
+
+### 疑問代名詞
+
+| 詞 | 意味 |
+| --- | --- |
+| who | だれ？ / だれを？ |
+| what | なに？ / なにを？ |
+| which | どれ？ |
+| whose | だれのもの？ |
+
+```
+"Who is that girl over there?" "That's Linda."
+"What is that building over there?" "That's City Hall."
+"Which is your coat, this one or that one?" "This one is."
+"There's a key on the table. Whose is it?" "It's David's."
+```
+
+### 疑問形容詞
+
+| 詞 | 意味 |
+| --- | --- |
+| whose | だれの…？ |
+| what | どんな…？ |
+| which | どの…？ |
+
+```
+"Whose shoes are these?" "They're mine."
+"What sport do you like?" "I like basketball."
+"Which bus should we take?" "The number 5."
+```
+
+### 疑問副詞
+
+| 詞 | 意味 |
+| --- | --- |
+| when | いつ？ |
+| where | どこ？ |
+| why | なぜ？ |
+| how | どのように？ |
+
+```
+"When does the concert begin?" "At seven."
+"Where can I park my car?" "You can park on this street."
+"Why did you go to the post office?" "To buy some stamps."
+"How do you go to school?" "By bus."
+```
