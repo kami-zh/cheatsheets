@@ -94,3 +94,62 @@ def insertion_sort(a)
   a
 end
 ```
+
+### ヒープソート
+
+まず二分ヒープを作成する（親要素が子要素より大きいか等しい二分木）。
+作成したヒープに対して、ルートから要素を取り出し最後尾に追加していく。
+これを要素数分繰り返す。
+
+```ruby
+def heap_sort(a)
+  n = a.size - 1
+
+  # Create heap
+  a = heapize(a, n)
+
+  # Sorting
+  for i in 0..n
+    tmp = a[0]
+    a[0] = a[n - i]
+    a[n - i] = tmp
+
+    # Create heap directed at unsorted array
+    a = heapize(a, n - 1 - i)
+  end
+
+  a
+end
+
+# Create heap
+#
+# @param [Array] a Array creating heap
+# @param [Integer] n Size of creating heap
+# @return [Array] Heapized array
+def heapize(a, n)
+  for i in 0..n
+    j = i
+    while j > 0
+      jp = pi(j)
+
+      if a[j] > a[jp]
+        tmp = a[j]
+        a[j] = a[jp]
+        a[jp] = tmp
+      end
+
+      j = jp
+    end
+  end
+
+  a
+end
+
+# Get parent node index from child node index
+#
+# @param [Integer] ci Index of child node
+# @return [Integer] Index of parent node
+def pi(ci)
+  (ci % 2 == 0) ? (ci / 2 - 1) : ((ci - 1) / 2)
+end
+```
